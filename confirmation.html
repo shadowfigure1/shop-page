@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>✅ Order Confirmed!</h2>
+        <p>Thank you, <span id="confirm-name"></span>! Your order has been received.</p>
+        <p><strong>Product:</strong> <span id="confirm-product"></span></p>
+        <p><strong>Quantity:</strong> <span id="confirm-quantity"></span></p>
+        <p><strong>Total Price:</strong> $<span id="confirm-price"></span></p>
+        <p><strong>Payment Method:</strong> <span id="confirm-payment"></span></p>
+        <p>We will contact you soon for delivery.</p>
+        <button onclick="window.location.href='index.html'">Go Back</button>
+    </div>
+
+    <script>
+        document.getElementById("confirm-name").innerText = localStorage.getItem("name");
+        document.getElementById("confirm-product").innerText = localStorage.getItem("product");
+        document.getElementById("confirm-quantity").innerText = localStorage.getItem("quantity");
+        document.getElementById("confirm-price").innerText = localStorage.getItem("price");
+        document.getElementById("confirm-payment").innerText = localStorage.getItem("payment");
+    </script>
+</body>
+</html>
